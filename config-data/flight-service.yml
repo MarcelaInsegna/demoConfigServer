@@ -22,5 +22,6 @@ eureka:
       defaultZone: http://localhost:8761/eureka
   instance:
     preferIpAddress: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 api:
   url: ${API_URL:"https://dolarapi.com/v1/dolares"}
