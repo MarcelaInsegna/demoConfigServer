@@ -2,14 +2,12 @@
 
 spring:
   application:
-    name: eureka-server
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
+    name: eureka-service
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8081
 
-server:
-  port: 8761
+
+
 

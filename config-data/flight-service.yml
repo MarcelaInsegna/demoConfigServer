@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    drive-class-name: com.mysql.cj.jdbc.Driver
+    password: meme8080
+    url: jdbc:mysql://localhost:3306/airlines
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+  server:
+    port: 0
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true
+api:
+  url: ${API_URL:"https://dolarapi.com/v1/dolares"}
